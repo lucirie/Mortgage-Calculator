@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.jpg">
+  
+  <title>Mortgage repayment calculator</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0;}
+    .attribution a { color: #133040; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="calculator-container">
+      <div class="calculator-panel">
+        <h1 class="title">Mortgage Calculator</h1>
+    
+        <button class="clear">Clear All</button>
+    
+        <div class="amount-container">
+          <h2>Mortgage Amount</h2>
+          <label>
+            &euro;
+            <input type="text">
+          </label>
+        </div>
+    
+        <div class="term-rate-container">
+          <div class="term">
+            <h2>Mortgage Term</h2>
+            <label>
+              <input type="text">
+              years
+            </label>
+          </div>
+    
+          <div class="rate">
+            <h2>Interest Rate</h2>
+            <label>
+              <input type="text">
+              %
+            </label>
+          </div>
+        </div>
+        <div class="mortgage-type">
+          <div class="option1">
+            <label>
+              <input type="radio" name="mortgage-type">
+              Repayment
+            </label>
+          </div>
+          <div class="option2">
+            <label>
+              <input type="radio" name="mortgage-type">
+              Interest Only
+            </label>
+          </div>
+        </div>
+        <div class="submit-btn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</div>
+      </div>
+
+      <div class="results-panel">
+        <div class="empty">
+          <img src="assets/illustration-empty.svg" alt="calculator drawing">
+          <h1 class="title">Results Shown Here</h1>
+          <p class="instructions">Complete the form and click "calculate repayments" to see what your monthly repayment would be</p>
+        </div>
+        
+        <div class="completed" hidden>
+          <h1 class="title">Your results</h1>
+          <p class="description">Your results are shown below based on the information
+            you provided. To adjust the results, edit the form and
+            click "calculate repayments" again.</p>
+          <div class="results">
+            <p>Your monthly repayments</p>
+            <h1 class="monthly-cost">&euro;</h1>
+            <hr>
+            <p>Total you'll repay over the term</p>
+            <h1 class="total-cost">&euro;</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/lucirie" target="_blank">Lucirie</a>.
+  </div>
+</body>
+</html>
