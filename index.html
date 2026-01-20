@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.jpg">
+  <script src="script.js"></script>
   
   <title>Mortgage repayment calculator</title>
 
@@ -18,49 +19,51 @@
     <div class="calculator-container">
       <div class="calculator-panel">
         <h1 class="title">Mortgage Calculator</h1>
-    
-        <button class="clear">Clear All</button>
-    
-        <div class="amount-container">
-          <h2>Mortgage Amount</h2>
-          <label>
-            &euro;
-            <input type="text" id="mortgageAmmount">
-          </label>
-        </div>
-    
-        <div class="term-rate-container">
-          <div class="term">
-            <h2>Mortgage Term</h2>
+        <form>
+          <button class="clear" id="clearBtn" type="reset">Clear All</button>
+      
+          <div class="amount-container">
+            <h2>Mortgage Amount</h2>
             <label>
-              <input type="text" id="mortgageTerm">
-              years
+              &euro;
+              <input type="text" id="mortgageAmmount">
             </label>
           </div>
-    
-          <div class="rate">
-            <h2>Interest Rate</h2>
-            <label>
-              <input type="text" id="mortgageRate">
-              %
-            </label>
+      
+          <div class="term-rate-container">
+            <div class="term">
+              <h2>Mortgage Term</h2>
+              <label>
+                <input type="text" id="mortgageTerm">
+                years
+              </label>
+            </div>
+      
+            <div class="rate">
+              <h2>Interest Rate</h2>
+              <label>
+                <input type="text" id="mortgageRate">
+                %
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="mortgage-type">
-          <div class="option1">
-            <label>
-              <input type="radio" name="mortgage-type" id="repaymentBtn">
-              Repayment
-            </label>
+          <div class="mortgage-type">
+            <div class="option1">
+              <label>
+                <input type="radio" name="mortgage-type" id="repaymentBtn">
+                Repayment
+              </label>
+            </div>
+            <div class="option2">
+              <label>
+                <input type="radio" name="mortgage-type" id="interestBtn">
+                Interest Only
+              </label>
+            </div>
           </div>
-          <div class="option2">
-            <label>
-              <input type="radio" name="mortgage-type" id="interestBtn">
-              Interest Only
-            </label>
-          </div>
-        </div>
-        <button class="submit-btn" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
+          <button class="submit-btn" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
+
+        </form>
       </div>
 
       <div class="results-panel">
