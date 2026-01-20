@@ -25,7 +25,7 @@
           <h2>Mortgage Amount</h2>
           <label>
             &euro;
-            <input type="text">
+            <input type="text" id="mortgageAmmount">
           </label>
         </div>
     
@@ -33,7 +33,7 @@
           <div class="term">
             <h2>Mortgage Term</h2>
             <label>
-              <input type="text">
+              <input type="text" id="mortgageTerm">
               years
             </label>
           </div>
@@ -41,7 +41,7 @@
           <div class="rate">
             <h2>Interest Rate</h2>
             <label>
-              <input type="text">
+              <input type="text" id="mortgageRate">
               %
             </label>
           </div>
@@ -49,18 +49,18 @@
         <div class="mortgage-type">
           <div class="option1">
             <label>
-              <input type="radio" name="mortgage-type">
+              <input type="radio" name="mortgage-type" id="repaymentBtn">
               Repayment
             </label>
           </div>
           <div class="option2">
             <label>
-              <input type="radio" name="mortgage-type">
+              <input type="radio" name="mortgage-type" id="interestBtn">
               Interest Only
             </label>
           </div>
         </div>
-        <div class="submit-btn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</div>
+        <button class="submit-btn" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
       </div>
 
       <div class="results-panel">
@@ -77,10 +77,10 @@
             click "calculate repayments" again.</p>
           <div class="results">
             <p>Your monthly repayments</p>
-            <h1 class="monthly-cost">&euro;</h1>
+            <h1 class="monthly-cost" id="monthlyCost">&euro;</h1>
             <hr>
             <p>Total you'll repay over the term</p>
-            <h1 class="total-cost">&euro;</h1>
+            <h1 class="total-cost" id="totalCost">&euro;</h1>
           </div>
         </div>
       </div>
