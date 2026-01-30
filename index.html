@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.jpg">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   
   <title>Mortgage repayment calculator</title>
 
@@ -50,39 +50,39 @@
           <div class="mortgage-type">
             <div class="option1">
               <label>
-                <input type="radio" name="mortgage-type" id="repaymentBtn">
+                <input type="radio" name="mortgage-type" id="repaymentBtn" value="repayment">
                 Repayment
               </label>
             </div>
             <div class="option2">
               <label>
-                <input type="radio" name="mortgage-type" id="interestBtn">
+                <input type="radio" name="mortgage-type" id="interestBtn" value="interest">
                 Interest Only
               </label>
             </div>
           </div>
-          <button class="submit-btn" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
+          <button type="button" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
 
         </form>
       </div>
 
       <div class="results-panel">
-        <div class="empty">
+        <div class="empty" id="empty">
           <img src="assets/illustration-empty.svg" alt="calculator drawing">
           <h1 class="title">Results Shown Here</h1>
           <p class="instructions">Complete the form and click "calculate repayments" to see what your monthly repayment would be</p>
         </div>
         
-        <div class="completed" hidden>
+        <div class="completed" id="completed" hidden>
           <h1 class="title">Your results</h1>
           <p class="description">Your results are shown below based on the information
             you provided. To adjust the results, edit the form and
             click "calculate repayments" again.</p>
           <div class="results">
-            <p>Your monthly repayments</p>
+            <p id="monthlyCostHeader">Your monthly repayments</p>
             <h1 class="monthly-cost" id="monthlyCost">&euro;</h1>
             <hr>
-            <p>Total you'll repay over the term</p>
+            <p id="totalCostHeader">Total you'll repay over the term</p>
             <h1 class="total-cost" id="totalCost">&euro;</h1>
           </div>
         </div>
