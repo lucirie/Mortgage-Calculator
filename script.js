@@ -39,3 +39,21 @@ function calculateTotal() {
     let totalPayments = calculateMonthly() * payments;
     return Math.trunc(totalPayments);
 }
+
+
+function calculateMonthlyInterest() {
+    let p = Number(mortgageAmmount.value);
+    let r = Number(mortgageRate.value / 100 / 12);
+
+    let monthlyInterest = r * p;
+    return monthlyInterest;
+}
+
+function calculateTotalInterest() {
+    let n = Number(mortgageTerm.value * 12);
+    let p = Number(mortgageAmmount.value);
+    let monthlyPayment = calculateMonthly();
+
+    let totalInterest = (monthlyPayment * n) - p;
+    return totalInterest;
+}
