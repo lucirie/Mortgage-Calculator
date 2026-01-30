@@ -22,30 +22,33 @@
         <form>
           <button class="clear" id="clearBtn" type="reset">Clear All</button>
       
-          <div class="amount-container">
+          <div class="amount-container" id="amountContainer">
             <h2>Mortgage Amount</h2>
             <label>
               &euro;
               <input type="text" id="mortgageAmmount">
             </label>
           </div>
+          <div class="error"></div>
       
           <div class="term-rate-container">
-            <div class="term">
+            <div class="term" id="termContainer">
               <h2>Mortgage Term</h2>
               <label>
                 <input type="text" id="mortgageTerm">
                 years
               </label>
             </div>
+            <div class="error"></div>
       
-            <div class="rate">
+            <div class="rate" id="rateContainer">
               <h2>Interest Rate</h2>
               <label>
                 <input type="text" id="mortgageRate">
                 %
               </label>
             </div>
+            <div class="error"></div>
           </div>
           <div class="mortgage-type">
             <div class="option1">
@@ -61,6 +64,7 @@
               </label>
             </div>
           </div>
+          <div id="mortgageTypeError"></div>
           <button type="button" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
 
         </form>

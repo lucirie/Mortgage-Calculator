@@ -7,7 +7,7 @@ const totalCost = document.getElementById('totalCost');
 
 submitBtn.addEventListener('click', function() {
     const mortgageType = document.querySelector('input[name="mortgage-type"]:checked');
-    let inputs = checkInputs();
+    let inputs =validateForm();
     if (inputs) {
         document.getElementById('completed').hidden = false;
         document.getElementById('empty').hidden = true;
@@ -56,4 +56,42 @@ function calculateTotalInterest() {
 
     let totalInterest = (monthlyPayment * n) - p;
     return totalInterest;
+}
+
+function validateInput(input, inputContainer) {
+    const errorDiv = inputContainer.nextElementSibling;
+
+    if (!input.value.trim()) {
+        errorDiv.textContent = 'Fill all fields';
+        return false;
+    } else {
+        errorDiv.textContent = '';
+        return true
+    }
+}
+
+function validateMortgageType() {
+    const mortgageType = document.querySelector('input[name="mortgage-type"]:checked');
+    const errorDiv = document.getElementById('mortgageTypeError');
+
+    if (!mortgageType) {
+        errorDiv.textContent = 'Fill all fields';
+        return false;
+    } else {
+        errorDiv.textContent = '';
+        return true;
+    }
+}
+
+function validateForm() {
+    amountContainer = document.getElementById('amountContainer');
+    termContainer = document.getElementById('termContainer');
+    rateContainer = document.getElementById('rateContainer');
+
+    const amountValid = validateInput(mortgageAmmount, amountContainer);
+    const termValid = validateInput(mortgageTerm, termContainer);
+    const rateValid = validateInput(mortgageRate, rateContainer);
+    const typeValid = validateMortgageType();
+    
+    return amountValid && termValid && rateValid && typeValid
 }
