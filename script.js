@@ -24,3 +24,18 @@ submitBtn.addEventListener('click', function() {
         }
     }
 });
+
+function calculateMonthly() {
+    let p = Number(mortgageAmmount.value);
+    let r = Number(mortgageRate.value / 100 / 12);
+    let n = Number(mortgageTerm.value * 12);
+
+    monthlyPayments = p * (r * (1 + r) ** n) / ((1 + r) ** n - 1);
+    return Math.trunc(monthlyPayments);
+}
+
+function calculateTotal() {
+    let payments = Number(mortgageTerm.value) * 12;
+    let totalPayments = calculateMonthly() * payments;
+    return Math.trunc(totalPayments);
+}
