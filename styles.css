@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #DFEFF7;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    background-color: white;
+}
+
+.results-panel {
+    background-color: #133040;
+    color: white;
+}
+
+
+@media (min-width: 900px) {
+    .calculator-container {
+        flex-direction: row;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px;
+    }
+
+    .calculator-panel {
+        flex: 1;
+        padding: 10px;
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .results-panel {
+        flex: 1;
+        padding: 10px;
+        border-radius: 0 20px 20px 50px;
+    }
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  *:not(dialog) {
+    margin: 0;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
