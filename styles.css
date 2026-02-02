@@ -13,6 +13,22 @@ body {
     flex-direction: column;
     max-width: 1300px;
     background-color: white;
+    padding: 20px;
+}
+
+.top {
+  display: flex;
+}
+
+.top .title {
+  font-size: 1.5rem;
+}
+
+.clear {
+  all: unset;
+  text-decoration: underline;
+  color: hsl(200, 24%, 40%);
+  margin-left: auto;
 }
 
 .results-panel {
@@ -30,7 +46,6 @@ body {
 
     .calculator-panel {
         flex: 1;
-        padding: 10px;
         border-radius: 20px 0 0 20px;
     }
     

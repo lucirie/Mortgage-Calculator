@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.jpg">
+  <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   
   <title>Mortgage repayment calculator</title>
@@ -17,10 +18,12 @@
 <body>
   <main>
     <div class="calculator-container">
-      <div class="calculator-panel">
-        <h1 class="title">Mortgage Calculator</h1>
+      <section class="calculator-panel">
         <form>
-          <button class="clear" id="clearBtn" type="reset">Clear All</button>
+          <div class="top">
+            <h1 class="title">Mortgage Calculator</h1>
+            <button class="clear" id="clearBtn" type="reset">Clear All</button>
+          </div>  
       
           <div class="amount-container" id="amountContainer">
             <h2>Mortgage Amount</h2>
@@ -68,9 +71,9 @@
           <button type="button" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button>
 
         </form>
-      </div>
+      </section>
 
-      <div class="results-panel">
+      <section class="results-panel">
         <div class="empty" id="empty">
           <img src="assets/illustration-empty.svg" alt="calculator drawing">
           <h1 class="title">Results Shown Here</h1>
@@ -90,7 +93,7 @@
             <h1 class="total-cost" id="totalCost">&euro;</h1>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </main>
   
