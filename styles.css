@@ -21,15 +21,70 @@ body {
 
 .top .title {
   font-size: 1.8rem;
+  color: #133040;
 }
 
+h2 {
+  color: hsl(200, 24%, 40%);
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 
 .clear {
   all: unset;
   text-decoration: underline;
+  text-underline-offset: 0.1rem;
   color: hsl(200, 24%, 40%);
   margin-left: auto;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.clear:hover {
+  cursor: pointer;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+.input-group {
+  outline: 1px solid hsl(200, 24%, 40%);
+  border-radius: 2px;
+  display: flex;
+}
+
+.input-group label {
+  background-color: #E4F3FC;
+  color: #133040;
+  padding: 8px;
+}
+
+.option1, .option2 {
+  outline: 1px solid hsl(200, 24%, 40%);
+  color: #133040;
+  border-radius: 3px;
+  padding: 8px 0 8px 10px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.option1 input, .option2 input {
+  margin: 0 8px;
+}
+
+button {
+  all: unset;
+  display: flex;
+  gap: 5px;
+  color: #133040;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  background-color: #D9DB30;
 }
 
 .results-panel {
@@ -59,6 +114,29 @@ body {
     .top .title {
       font-size: 1.2rem;
     }
+
+    .clear {
+      font-size: 0.8rem;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+    }
+
+    .term-rate-container {
+      display: flex;
+    }
+
+    .term {
+      margin-right: 10px;
+    }
+
+
+
+    input[type='radio'] {
+      transform: scale(1.2);
+    }
+
     
     .results-panel {
         flex: 1;
