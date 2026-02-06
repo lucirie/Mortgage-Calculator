@@ -110,12 +110,13 @@ button {
     .calculator-panel {
         min-width: 0;
         flex: 1;
-        padding: 30px;
+        padding: 25px;
         border-radius: 20px 0 0 20px;
     }
     
     .top {
       display: flex;
+      margin-bottom: 20px;
     }
 
     .top .title {
@@ -130,8 +131,21 @@ button {
       font-size: 0.8rem;
     }
 
+    .amount-container {
+      margin: 20px 0;
+    }
+
     .term-rate-container {
+      margin: 20px 0;
       display: flex;
+    }
+
+    .calculator-panel h2 {
+      margin-bottom: 10px;
+    }
+
+    #submitBtn {
+      margin-top: 40px;
     }
 
     .rate {
