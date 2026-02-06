@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+/* * {
+  outline: 1px solid red;
+} */
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #DFEFF7;
@@ -59,8 +63,10 @@ h2 {
 
 .input-group label {
   background-color: #E4F3FC;
-  color: #133040;
-  padding: 8px;
+  color: hsl(200, 24%, 40%);
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .option1, .option2 {
@@ -102,6 +108,7 @@ button {
     }
 
     .calculator-panel {
+        min-width: 0;
         flex: 1;
         padding: 30px;
         border-radius: 20px 0 0 20px;
@@ -127,9 +134,20 @@ button {
       display: flex;
     }
 
+    .rate {
+      min-width: 0;
+      flex: 1;
+    }
+
     .term {
+      min-width: 0;
+      flex: 1;
       margin-right: 10px;
     }
+
+    .term input, .rate input {
+      min-width: 0;
+    } 
 
 
 
