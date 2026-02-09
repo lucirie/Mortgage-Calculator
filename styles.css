@@ -219,8 +219,20 @@ button {
       font-size: 0.8rem;
     }
 
+    .clear:hover {
+      color: #133040;
+    }
+
     h2 {
       font-size: 0.8rem;
+    }
+
+    .input-group:hover {
+      outline: 1px solid black;
+    }
+
+    input:hover {
+      cursor: pointer;
     }
 
     .amount-container {
@@ -240,6 +252,11 @@ button {
       padding: 10px 30px;
       margin-top: 30px;
       font-weight: 700;
+    }
+
+    #submitBtn:hover {
+      background-color: #EBEE97;
+      cursor: pointer;
     }
 
     .btn-section {
@@ -262,6 +279,11 @@ button {
     .term input, .rate input {
       min-width: 0;
     } 
+
+    .option1:hover, .option2:hover {
+      cursor: pointer;
+      outline: 2px solid #EBEE97;
+    }
 
     input[type='radio'] {
       transform: scale(1.2);
