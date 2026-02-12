@@ -29,7 +29,7 @@
             <h2>Mortgage Amount</h2>
             <div class="input-group">
               <label for="mortgageAmmount">&euro;</label>
-              <input type="text" id="mortgageAmmount">
+              <input type="text" id="mortgageAmmount" autocomplete="off">
             </div>
           </div>
           <div class="error"></div>
@@ -38,7 +38,7 @@
             <div class="term" id="termContainer">
               <h2>Mortgage Term</h2>
               <div class="input-group">
-                <input type="text" id="mortgageTerm">
+                <input type="text" id="mortgageTerm" autocomplete="off">
                 <label for="mortgageTerm">years</label>
               </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="rate" id="rateContainer">
               <h2>Interest Rate</h2>
               <div class="input-group">
-                <input type="text" id="mortgageRate">
+                <input type="text" id="mortgageRate" autocomplete="off">
                 <label for="mortgageRate">%</label>
               </div>
             </div>
@@ -55,19 +55,20 @@
           </div>
           <div class="mortgage-type">
             <h2>Mortgage Type</h2>
-            <div class="option1">
-              <label>
+            <label for="repaymentBtn" class="option1">
+              <label class="custom-radio-btn">
                 <input type="radio" name="mortgage-type" id="repaymentBtn" value="repayment">
-                Repayment
+                <span class="checkmark"></span>
               </label>
-            </div>
-            <div class="option2">
-              <label>
+              <label for="repaymentBtn">Repayment</label>
+            </label>
+            <label for="interestBtn" class="option2">
+              <label class="custom-radio-btn">
                 <input type="radio" name="mortgage-type" id="interestBtn" value="interest">
-                Interest Only
+                <span class="checkmark"></span>
               </label>
-            </div>
-          </div>
+              <label for="interestBtn">Interest Only</label>
+            </label>
           <div id="mortgageTypeError"></div>
           <div class="btn-section"><button type="button" id="submitBtn"><img src="./assets/icon-calculator.svg" alt="calculator icon">Calculate Repayments</button></div>
 
