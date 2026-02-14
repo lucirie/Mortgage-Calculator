@@ -205,6 +205,13 @@ button {
   place-items: center;
 }
 
+.error, #mortgageTypeError {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
 .results-panel {
   display: flex;
   align-items: center;

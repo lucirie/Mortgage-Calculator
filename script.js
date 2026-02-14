@@ -7,7 +7,7 @@ const totalCost = document.getElementById('totalCost');
 
 submitBtn.addEventListener('click', function() {
     const mortgageType = document.querySelector('input[name="mortgage-type"]:checked');
-    let inputs =validateForm();
+    let inputs = validateForm();
     if (inputs) {
         document.getElementById('completed').hidden = false;
         document.getElementById('empty').hidden = true;
@@ -58,13 +58,22 @@ function calculateTotalInterest() {
     return totalInterest;
 }
 
-function validateInput(input, inputContainer) {
-    const errorDiv = inputContainer.nextElementSibling;
-
+function validateInput(input, container) {
     if (!input.value.trim()) {
-        errorDiv.textContent = 'Fill all fields';
+        inputGroup = container.querySelector('.input-group')
+        errorDiv = container.querySelector('#error');
+        label = container.querySelector('label');
+
+        label.style.backgroundColor = 'red';
+        label.style.color = 'white';
+        inputGroup.style.outline = '1px solid red';
+        errorDiv.textContent = 'This field is required';
+        
         return false;
     } else {
+        label.style.backgroundColor = '#E4F3FC';
+        label.style.color = '#4E6E7E';
+        inputGroup.style.outline = '1px solid hsl(200, 24%, 40%)';
         errorDiv.textContent = '';
         return true
     }
@@ -75,7 +84,7 @@ function validateMortgageType() {
     const errorDiv = document.getElementById('mortgageTypeError');
 
     if (!mortgageType) {
-        errorDiv.textContent = 'Fill all fields';
+        errorDiv.textContent = 'This field is required';
         return false;
     } else {
         errorDiv.textContent = '';
@@ -84,9 +93,9 @@ function validateMortgageType() {
 }
 
 function validateForm() {
-    amountContainer = document.getElementById('amountContainer');
     termContainer = document.getElementById('termContainer');
     rateContainer = document.getElementById('rateContainer');
+    amountContainer = document.getElementById('amountContainer');
 
     const amountValid = validateInput(mortgageAmmount, amountContainer);
     const termValid = validateInput(mortgageTerm, termContainer);
