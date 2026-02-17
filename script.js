@@ -59,11 +59,10 @@ function calculateTotalInterest() {
 }
 
 function validateInput(input, container) {
+    inputGroup = container.querySelector('.input-group')
+    errorDiv = container.querySelector('#error');
+    label = container.querySelector('label');
     if (!input.value.trim()) {
-        inputGroup = container.querySelector('.input-group')
-        errorDiv = container.querySelector('#error');
-        label = container.querySelector('label');
-
         label.style.backgroundColor = 'red';
         label.style.color = 'white';
         inputGroup.style.outline = '1px solid red';
