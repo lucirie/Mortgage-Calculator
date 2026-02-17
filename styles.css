@@ -229,6 +229,11 @@ button {
   align-items: center;
 }
 
+.empty[hidden] {
+  display: none !important;
+}
+
+
 .empty img {
   width: 200px;
 }
