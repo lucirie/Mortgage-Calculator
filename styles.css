@@ -250,6 +250,53 @@ button {
   color: hsl(203, 41%, 72%);
 }
 
+.completed {
+  height: 100%;
+  width: 100%;
+}
+
+.completed .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.completed .description {
+  font-size: 0.8rem;
+  color: hsl(203, 41%, 72%);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.completed .results {
+  background-color: #0E2431;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 -3px 0 #D9DB30;
+}
+
+.results .results-info {
+  font-size: 0.8rem;
+  color: hsl(203, 41%, 72%);
+}
+
+.results .monthly-cost {
+  font-size: 2.5rem;
+  color: #D9DB30;
+  margin: 0;
+}
+
+.results hr {
+  border: none;
+  height: 1px;
+  background-color: hsla(203, 41%, 72%, 0.423);
+  margin: 20px 0;
+}
+
+.results .total-cost {
+  margin-top: 5px;
+  font-size: 1.3rem;
+}
+
 .results-panel {
     background-color: #133040;
     color: white;
