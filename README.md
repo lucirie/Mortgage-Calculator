@@ -1,0 +1,30 @@
+# Mortgage repayment calculator (Web Dev Practice)
+
+This is a solution to the [Mortgage repayment calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+### The challenge
+
+Users should be able to:
+
+- Input mortgage information and see monthly repayment and total repayment amounts after submitting the form
+- See form validation messages if any field is incomplete
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Preview
+
+#### Desktop preview:
+![Desktop Preview](./preview/desktop-preview.gif)
+
+#### Mobile preview:
+![Mobile Preview](./preview/mobile-preview.gif)
+
+- Solution URL: [See Site Here](https://lucirie.github.io/Mortgage-Calculator/)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow

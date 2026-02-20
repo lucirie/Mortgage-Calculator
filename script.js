@@ -4,6 +4,7 @@ const mortgageRate = document.getElementById('mortgageRate');
 const submitBtn = document.getElementById('submitBtn');
 const monthlyCost = document.getElementById('monthlyCost');
 const totalCost = document.getElementById('totalCost');
+const clearBtn = document.getElementById('clearBtn');
 
 submitBtn.addEventListener('click', function() {
     const mortgageType = document.querySelector('input[name="mortgage-type"]:checked');
@@ -24,6 +25,11 @@ submitBtn.addEventListener('click', function() {
         }
     }
 });
+
+clearBtn.addEventListener('click', () => {
+    document.getElementById('completed').hidden = true;
+    document.getElementById('empty').hidden = false;
+})
 
 function calculateMonthly() {
     let p = Number(mortgageAmmount.value);
