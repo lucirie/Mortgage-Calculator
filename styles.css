@@ -113,6 +113,7 @@ h2 {
   font-size: 1rem;
   display: grid;
   place-items: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .input-group:has(input:focus) {
@@ -150,6 +151,7 @@ h2 {
   font-weight: 700;
   font-size: 0.9rem;
   margin: 10px 0;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .custom-radio-btn {
@@ -198,6 +200,7 @@ button {
   border-radius: 25px;
   font-weight: 700;
   background-color: #D9DB30;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .btn-section {
